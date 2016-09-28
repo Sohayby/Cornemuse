@@ -5,10 +5,20 @@
  */
 package straming.dao;
 
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import straming.entity.Serie;
+
 /**
  *
  * @author admin
  */
 public class SerieDAO {
+    public List<Serie> ListerSeries () {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        List<Serie> series = em.createQuery("SELECT s FROM Serie s ORDER BY s.id DESC").getResultList();
+        return series;
+    }
     
 }

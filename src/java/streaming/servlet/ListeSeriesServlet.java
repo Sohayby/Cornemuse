@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import straming.entity.Serie;
+import straming.service.SerieService;
 
 /**
  *
@@ -25,10 +26,11 @@ public class ListeSeriesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        
-    List<Serie> series = new Serie().lister();
+    List<Serie> series = new SerieService().lister();
     
     req.setAttribute("titre", "TEST LISTE SERIES");
     req.setAttribute("mesSeries", series);
+     req.setAttribute("piedDepage","Copyright 2006");
     req.getRequestDispatcher("lister_series.jsp").forward(req, resp);
     
         
