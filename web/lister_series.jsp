@@ -1,12 +1,10 @@
 <%-- 
-    Document   : _TEMPLATE
-    Created on : 28 sept. 2016, 16:09:14
+    Document   : lister_series
+    Created on : 28 sept. 2016, 16:45:38
     Author     : admin
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,11 +18,11 @@
         </div> 
         
         <div class="titre">
-           Liste des films
+           Liste des series
         </div> 
         
         <div class="contenu">
-         <c:forEach items="${mesFilms}" var="monFilm">
+            <c:forEach items="${mesFilms}" var="monFilm">
                 ${monFilm.titre}
                 <br>
             </c:forEach>

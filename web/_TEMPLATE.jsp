@@ -24,7 +24,7 @@
         </div> 
         
         <div class="contenu">
-         <c:forEach items="${mesFilms}" var="monFilm">
+            <c:forEach items="${mesFilms}" var="monFilm">
                 ${monFilm.titre}
                 <br>
             </c:forEach>
